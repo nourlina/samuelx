@@ -2,18 +2,57 @@
     var destinationType; // sets the format of returned value
 
     // Wait for PhoneGap to connect with the device
-    //
+// Le watchID référence l'écoute de l'accéléromètre courante
+    var watchID = null;
     document.addEventListener("deviceready",onDeviceReady,false);    //
      
           
      
     function onDeviceReady() {    
+        startWatch();
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
     }
 
-     
+
+
+// Lancement de l'écoute de l'accéléromètre
+//
+function startWatch() {
+    
+    // Récupération toutes les 3 secondes
+    var options = { frequency: 3000 };
+    
+    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+}
+
+// Arrêt de l'écoute grâce au watchID
+//
+function stopWatch() {
+    if (watchID) {
+        navigator.accelerometer.clearWatch(watchID);
+        watchID = null;
+    }
+}
+
+// onSuccess: Callback en cas de succès d'appel à l'accéléromètre
+//
+function onSuccess(acceleration) {
+    var element = document.getElementById('accelerometer');
+    element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+    'Acceleration Y: ' + acceleration.y + '<br />' +
+    'Acceleration Z: ' + acceleration.z + '<br />' +
+    'Timestamp: '      + acceleration.timestamp + '<br />';
+}
+
+// onError: Callback en cas d'échec d'appel à l'accéléromètre
+//
+function onError() {
+    alert('onError!');
+}
+
+
      // Called when a photo is successfully retrieved
      //
      function onPhotoDataSuccess(imageData) {
