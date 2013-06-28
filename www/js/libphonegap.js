@@ -9,10 +9,11 @@
           
      
     function onDeviceReady() {    
-        startWatch();
+       
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
         pictureSource=navigator.camera.PictureSourceType;
         destinationType=navigator.camera.DestinationType;
+         startWatch();
     }
 
 
@@ -24,10 +25,10 @@ function startWatch() {
     // Récupération toutes les 3 secondes
     var options = { frequency: 3000 };
     
-    watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    watchID = navigator.accelerometer.watchAcceleration(onSuccesss, onError, options);
 }
 
-// Arrêt de l'écoute grâce au watchID
+// Arrêt de l'écoute grâce à watchID
 //
 function stopWatch() {
     if (watchID) {
@@ -38,7 +39,7 @@ function stopWatch() {
 
 // onSuccess: Callback en cas de succès d'appel à l'accéléromètre
 //
-function onSuccess(acceleration) {
+function onSuccesss(acceleration) {
     var element = document.getElementById('accelerometer');
     element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
     'Acceleration Y: ' + acceleration.y + '<br />' +
@@ -51,6 +52,7 @@ function onSuccess(acceleration) {
 function onError() {
     alert('onError!');
 }
+
 
 
      // Called when a photo is successfully retrieved
