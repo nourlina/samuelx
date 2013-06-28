@@ -12,6 +12,28 @@ function taco(var1) {
     
 	}
 	
+function page(pages)
+{
+alert(pages);
+if(pages==3)
+	{
+	document.getElementById('page1').visibility='hidden';
+	document.getElementById('page1').height='0px';	
+	document.getElementById('page'+pages).visibility='visible';
+	document.getElementById('page'+pages).height='auto';	
+	}
+else
+	{
+	document.getElementById('page'+pages).visibility='hidden';
+	document.getElementById('page'+pages).height='0px';	
+	document.getElementById('page1').visibility='visible';
+	document.getElementById('page1').height='auto';	
+	}
+
+
+
+}
+	
 function VerificationMail(email)
 {
  address = email.toUpperCase();
