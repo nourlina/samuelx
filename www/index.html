@@ -1,69 +1,808 @@
 <!DOCTYPE html>
+<!--[if IE Mobile]>
+   <html class="ie">
+<![endif]--> 
+<!--[if !(IE Mobile)]><!--> 
 <html>
-  <head>
-  <title></title>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
-	<meta charset="utf-8">
-    
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- CORE -->
-    <script src='cordova-2.7.0.js'></script>
-    <script src='js/core/jQuery.js'></script>
-    
-    <!-- PLUGINS -->
-    <script src='js/plugins/ImageFilter.js'></script>
+<!--<![endif]-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">	
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	
+	<title>SAMUEL</title> 
+	<meta name="author" content="Soufiane BARAKAT">
+	<meta name="description" content="Application Mobile samuel">
+    <meta name="keywords" content="lina solutions, dog, application, ipad">
+    <link rel="shortcut icon" href="thehotdog.png">
+	<link rel="icon" href="thehotdog.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+	<script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+	<script src="js/ajax.js" charset="utf-8"></script>
+    <script src="js/connexion.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/divers.js"></script>    
+	<script src="js/libphonegap.js" charset="utf-8"></script>	
+<!--<link href='css/mobiles.min.css' rel='stylesheet' type='text/css' />-->
+	 <link rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/docs.css" />
+	<link type="text/css" rel="stylesheet" href="css/mmenu.css" />
+	<link href="css/royalslider.css" rel="stylesheet">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.royalslider.min.js?v=9.3.6"></script>
+    <link href="css/reset.css?v=1.0.4" rel="stylesheet">
+    <link href="css/rs-default-inverted.css?v=1.0.4" rel="stylesheet">
+	<link href="css/homeslider.css" rel="stylesheet">		
+    <link href="css/classe.css" rel="stylesheet" type="text/css" />	
+    <link rel="stylesheet" href="css/shCore.css"/>
+    <link rel="stylesheet" href="css/shThemeRDark.css"/>	
+	<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
+	
+	
+	<script type="text/javascript" src="cssjs/jquerys.js"></script>
+	<link rel="stylesheet" type="text/css" href="cssjs/settings.css" media="screen">
+	<script type="text/javascript" src="cssjs/jquery.themepunch.plugins.min.js"></script>
+	<script type="text/javascript" src="cssjs/jquery.themepunch.showbizpro.min.js"></script>
+	
+	<link href="popoverDemo.css" media="screen" rel="stylesheet" type="text/css" /> 
+	<link href="jquery.popover.css" media="screen" rel="stylesheet" type="text/css" /> 
+	<script src="jquery.popover.js" type="text/javascript"></script>
+	
         
-    <!-- OUR SCRIPTS -->
-    <script src='js/init.js'></script>
         
         
-  </head>
-  <body onload="app.bodyLoad()">
-  	<div id="header"><img src="images/header.png" width="100%"></div>
-  	<div id="wrapper">
-        <div id="content">
-        
-        	<!-- BUTTONS -->
-            <div id="buttons">
-            	<div class="btn" id="camera" onClick="app.useCamera();">use camera</div>
-                <div class="btn" id="roll" onClick="app.useRoll();">use library</div>
-            </div>
-            <!-- END BUTTONS -->
-            
-            <!-- IMAGE AREA -->
-            <div id="imageArea">
-            	<!-- OUR IMAGE -->
-                <div class="photo"></div>
-                <!-- FILTERS -->
-                <div id="filters">
-                	<div class="filter" id="none" onClick="filters.none(largeImage);">
-                    	<div class="filterIcon"><img src="images/filters/none.png" height="100%"></div>
-                        <div class="filterTitle">none</div>
-                    </div>
-                    <div class="filter" id="sunnySide" onClick="filters.sunnySide(largeImage);">
-                    	<div class="filterIcon"><img src="images/filters/sunnySide.png" height="100%"></div>
-                        <div class="filterTitle">sunnySide</div>
-                    </div>
-                    <div class="filter" id="worn" onClick="filters.worn(largeImage);">
-                    	<div class="filterIcon"><img src="images/filters/worn.png" height="100%"></div>
-                        <div class="filterTitle">worn</div>
-                    </div>
-                    <div class="filter" id="vintage" onClick="filters.vintage(largeImage);">
-                    	<div class="filterIcon"><img src="images/filters/vintage.png" height="100%"></div>
-                        <div class="filterTitle">vintage</div>
-                    </div>
-                    <div class="filter" id="stark" onClick="filters.stark(largeImage);">
-                    	<div class="filterIcon"><img src="images/filters/stark.png" height="100%"></div>
-                        <div class="filterTitle">stark</div>
-                    </div>
-                </div>
-            </div>
-            <!-- END IMAGE AREA -->
-            
-            
-        </div>
+</head>
+	<body style="height:100%;overflow:hidden;">
+
+<input type='hidden' value='0' id='fliper'><input type="hidden" value="" id="latitudes"><input type="hidden" value="" id="longitudes"><input type='hidden' value='0' id='ti'>
+    <div id="page" >
+			<div id="header">
+				<a href="#menu-left"></a>
+				<!--<a href="#" class="win right3" >15245</a>-->
+				<a href="#" class="winn right3" ></a>
+				<a href="#" id='fidelite' class="notif right2" ></a>
+				<a href="#" class="coeu right1" ></a>
+				<a href="#menu-right" class="friends right"></a>
+			</div>
+			<div id="content">
+				
+	
+			
+		<div style='visibility:hidden;height:0px;' id='flipbox1s'></div>   
+				<div id="homeSlider" class="royalSlider rsDefaultInv" style="background-color:none;">
+
+	<div class="rsContent" style='background-color:#fff;overflow-y: scroll;-webkit-overflow-scrolling: touch;'>
+						<i class="rsTmb" >About me</i>
+                        
+                                               
+						<div id="flipbox1" class="flipbox">
+							<div style="height:30px;background-color:none;clear:both;" id="mapper">&nbsp;</div>
+                           
+                            
+                       
+                            
+                            <div style='width:100%;' class='horizotal1' onclick='taco(3);' ondrop='taco(3);' ondrag='taco(3);' >
+			<div class="showbiz-container fullwidth nopaddings " >
+				<div class="showbiz sb-modern-skin" >
+					<div class="overflowholder" style="position: relative; cursor: -webkit-grab; overflow: hidden; height: 420px;"><div style="position: absolute; opacity: 0; background-color: white; width: 15.95169px; height: 6px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin: -6px 0px 0px; z-index: 999;"></div>
+						<ul style="left: 0px; height: 420px;" >
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img src="pictures/01.jpg"  />
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img src="pictures/01.jpg" />
+											</div>
+										</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>                         
+                            
+                            
+                            
+			
+							<div id='fale' >	
+								<div style='width:100%;clear:both;padding-top:10px;text-align:center'>									
+										<div class="username">
+											<input type="email" id="login_username" name="login_username" placeholder="Utilisateur" onclick="taco(1)" >
+										</div>
+										<div style='padding-top:0px;'>
+										<div class="passes">
+											<input type="password" id="login_passwd" name="login_passwd" placeholder="Mot de passe" onclick="taco(2)">
+										</div></div>									
+								</div>
+								<div style='width:100%;padding-top:5px;text-align:center;visibility:visible;height:auto' >
+								<table style='width:100%;'>
+									<tr>
+									<td style='width:4%;float:left;'>&nbsp;</td>
+									<td style='width:40%;float:left;'><button class="button1" onclick="sendmap()">Se connecter</button></td>
+									<td style='width:8%;float:left;'>&nbsp;</td>
+									<td style='width:44%;float:left;padding-top:8px;'><a href='#' class='lien1'>Forgot your password?</a></td>
+									<td style='width:4%;float:left;'>&nbsp;</td>
+									
+									
+									
+									<tr>
+								</table>
+									
+								</div>
+								
+								
+								<div style='clear:both;padding-top:5px;text-align:center;'><img src='pictures/twi.jpg' /></div>
+								<div style='clear:both;padding-top:5px;text-align:center;'><img src='pictures/faceb.jpg' /></div>								
+								<div style='clear:both;text-align:center'><a class='lien1' href="#" >Not yet a member?</a></div>
+						</div>
+					</div>
+					
+								
+					<div style='clear:both;padding-top:0px;text-align:center;' id="retour1" ><div style='clear:both;height:30px;text-align:center;font-size:10px' id='loadi'>&nbsp;</div>
+                        <div id='monmaping' style="visibility:hidden;height:0px"></div><div style='padding-top:5px;clear:both;text-align:center;width:100%;' ><a class="button2" id="btn-left" > &nbsp;&nbsp;&nbsp;Sign up&nbsp;&nbsp;&nbsp;</a>
+				</div></div>
+				<div style='height:10px;clear:both;width:100%;'>&nbsp;</div>
+				
+				</div>
+	
+	
+	
+	
+	
+	
+	<div class="rsContent">
+					<i class="rsTmb" onclick='taco(5);'>Home</i>
+					<div style="height:30px;background-color:none;clear:both;">&nbsp;</div>		   
+					<!--<img class="rsImg" src="pictures/01.jpg" id='rsImg' />-->
+		<div style='width:100%;' class='horizotal2' onclick='taco(3);' ondrop='taco(3);' ondrag='taco(3);' >
+			<div class="showbiz-container fullwidth nopaddings " >
+				<div class="showbiz sb-modern-skin" >
+					<div class="overflowholder" style="position: relative; cursor: -webkit-grab; overflow: hidden; height: 420px;"><div style="position: absolute; opacity: 0; background-color: white; width: 15.95169px; height: 6px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin: -6px 0px 0px; z-index: 999;"></div>
+						<ul style="left: 0px; height: 420px;" >
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img src="pictures/01.jpg"  />
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img src="pictures/01.jpg" />
+											</div>
+										</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+					<div style='width:100%;height:100%;' id='ac'>
+						<div style='width:100%;height:69%;clear:both'>
+							<div style='width:63%;height:100%;float:left'>
+								<div style='width:100%;height:33%;background-color:#7f8759;float:left'><img src='pictures/11.jpg' style='width:100%;height:100%;'/></div>
+								<div style='width:100%;height:33%;background-color:#5f5656;float:left' ><img src='pictures/2.jpg' style='width:100%;height:100%;' onclick="capturePhoto();"/></div>
+								<div style='width:100%;height:33%;background-color:#a9a41b;float:left'><img src='pictures/3.jpg' style='width:100%;height:100%;'/></div>
+							</div>					
+							<div style='width:37%;height:100%;float:left'>
+								<div style='width:100%;height:50%;background-color:#55a1c8;clear:both'><img src='pictures/4.jpg' style='width:100%;height:100%;' onclick="getPhoto(pictureSource.PHOTOLIBRARY);"/></div>
+								<div style='width:100%;height:50%;background-color:#877c63;clear:both'><img src='pictures/5.jpg' style='width:100%;height:100%;' onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"/></div>
+							</div>					
+						</div>
+						<div style='width:100%;height:31%;clear:both'>
+							<div style='width:34%;height:100%;background-color:#5bcdee;float:left'><img src='pictures/6.jpg' style='width:100%;height:100%;'/></div>
+							<div style='width:33%;height:100%;background-color:#38413b;float:left'><img src='pictures/7.jpg' style='width:100%;height:100%;'/></div>
+							<div style='width:33%;height:100%;background-color:#b87d71;float:left'><img src='pictures/8.jpg' style='width:100%;height:100%;'/></div>
+						</div>
+					</div>
+				</div>
+	
+	
+	
+	<div class="rsContent">
+					<i  class="rsTmb" onclick='taco(5);'>My page</i>
+					<div style="height:30px;background-color:none;clear:both;">&nbsp;</div>
+						<div style="height:1500px; overflow-y: scroll;-webkit-overflow-scrolling: touch;">
+							<div style="width:100%">     
+							 <div style="width:2%;float:left">&nbsp;</div>
+							 <div style="width:47%;float:left"><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/apercu.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/hillroad.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"></div>
+							 <div style="width:2%;float:left">&nbsp;</div>
+							 <div style="width:47%;float:left"><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/ac.jpg" width="100%" alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/hill_road.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/836815.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"><br/><img src="http://www.appelsiini.net/projects/lazyload/img/grey.gif" data-original="pictures/1.jpg" width="100%"  alt="BMW M1 Hood"></div>
+							 <div style="width:2%;float:left">&nbsp;</div>
+						</div>     
+					</div>
+				<div id="sidebar"></div>           
+          </div>
+	
+	
+	
+	
+	
+			<div class="rsContent" >
+			<i class="rsTmb" onclick='taco(4);'>Friends all</i>
+			<div style="height:30px;background-color:none;clear:both;" onclick='taco(5);' ondrop='taco(5);' ondrag='taco(5);'>&nbsp;</div>				
+			<div style='padding-left:10%;padding-right:10%;'>
+             <div style='font-size:15px;font-weight:bold;clear:both'>Cinéma(5) </div>
+                <div class='horizotal' onclick='taco(3);' ondrop='taco(3);' ondrag='taco(3);' >
+			<div class="showbiz-container fullwidth nopaddings " >
+				<div class="showbiz sb-modern-skin" >
+					<div class="overflowholder" style="position: relative; cursor: -webkit-grab; overflow: hidden; height: 420px;"><div style="position: absolute; opacity: 0; background-color: white; width: 15.95169px; height: 6px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin: -6px 0px 0px; z-index: 999;"></div>
+						<ul style="left: 0px; height: 420px;" >
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg" >
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern2.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern2.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+
+						</ul>
+						<div class="sbclear"></div>
+					</div>
+					<div class="sbclear"></div>
+				</div>
+			</div>
+			</div></div>			
+         
+		<div style="height:15px;background-color:none;clear:both;" onclick='taco(5);' ondrop='taco(5);' ondrag='taco(5);'>&nbsp;</div>
+		 	<div style='padding-left:10%;padding-right:10%;'>
+             <div style='font-size:15px;font-weight:bold;clear:both'> Sport et Loisirs(45) </div>
+			<div class='horizotal' onclick='taco(3);' ondrop='taco(3);' ondrag='taco(3);' >
+			<div class="showbiz-container fullwidth nopaddings ">
+				<div class="showbiz sb-modern-skin" >
+					<div class="overflowholder" style="position: relative; cursor: -webkit-grab; overflow: hidden; height: 420px;"><div style="position: absolute; opacity: 0; background-color: white; width: 15.95169px; height: 6px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin: -6px 0px 0px; z-index: 999;"></div>
+						<ul style="left: 0px; height: 420px;">
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern2.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern2.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+
+						</ul>
+						<div class="sbclear"></div>
+					</div>
+					<div class="sbclear"></div>
+				</div>
+			</div>
+		</div>
+</div>	
+	
+	
+	<div style="height:15px;background-color:none;clear:both;" onclick='taco(5);' ondrop='taco(5);' ondrag='taco(5);'>&nbsp;</div>
+		 	<div style='padding-left:10%;padding-right:10%;'>
+             <div style='font-size:15px;font-weight:bold;clear:both'> Sport & Loisirs(33) </div>
+			<div class='horizotal' onclick='taco(3);' ondrop="taco(3);" ondrag='taco(3);' >
+			<div class="showbiz-container fullwidth nopaddings ">
+				<div class="showbiz sb-modern-skin" >
+					<div class="overflowholder" style="position: relative; cursor: -webkit-grab; overflow: hidden; height: 420px;"><div style="position: absolute; opacity: 0; background-color: white; width: 15.95169px; height: 6px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin: -6px 0px 0px; z-index: 999;"></div>
+						<ul style="left: 0px; height: 420px;">
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern2.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern2.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern1.jpg">
+											</div>
+										</div>
+							</li>
+							<li class="sb-modern-skin" >
+										<div class="mediaholder">
+											<div class="mediaholder_innerwrap">
+												<img alt="" src="pict/modern3.jpg">
+											</div>
+										</div>
+							</li>
+
+						</ul>
+						<div class="sbclear"></div>
+					</div>
+					<div class="sbclear"></div>
+				</div>
+			</div>
+		</div>
+</div>	
+
+
+	
+	</div>
+	          <div class="rsContent">
+			<i class="rsTmb" onclick='taco(5);'>Leaders</i> 
+			<div style="height:30px;background-color:none;clear:both;">&nbsp;</div>
+            <a class="example-link" href="http://www.linasolutions.ma">A suivre &#9656;</a>			
+							
+                  
+                  <div id="accelerometer">Waiting for accelerometer...</div>
+                  <button onclick="startWatch();">Start Watching</button> <button onclick="stopWatch();">Stop Watching</button>
+                  <br />
+                  <p><a href="index.html">back</a></p>
+                  
+          </div>
+	
+	
+	
+	
+	
+	
+	
+		</div>
+	</div>
+	
+
+
+
+	<nav id="menu-left">
+		<ul>
+			<li><a href="test.html">Mon profil</a></li>
+			<li><a href="1.html">Carte de visite</a></li>
+			<li><a href="#" onclick='page(3)';>Podometre</a></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes photos</span></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes vidéos</span></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes cadeaux</span></li>
+			<li><a href="#">Mes batailles</a></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Amis</span></li>
+			<li><a href="#">Meeting spot</a></li>
+			<li><a href="#">Boutique Objet</a></li>
+			<li><a href="#">Boutique Action</a></li>
+			<li><a href="#">Déconnexion</a></li>
+			
+		</ul>
+	</nav>
+	<nav id="menu-right">
+		<ul>
+			<li>
+				<span>Friends</span>
+					<ul>
+						<li class="Label">A</li>
+						<li><a href="#ALES">Alexa</a></li>
+						<li><a href="#">Alexander</a></li>
+						<li class="Label">F</li>
+						<li><a href="#">Fred</a></li>
+						<li class="Label">J</li>
+						<li><a href="#">James</a></li>
+						<li><a href="#">Jefferson</a></li>
+						<li><a href="#">Jordan</a></li>
+						<li class="Label">K</li>
+						<li><a href="#">Kim</a></li>
+						<li class="Label">M</li>
+						<li><a href="#">Meagan</a></li>
+						<li><a href="#">Melissa</a></li>							
+						<li class="Label">N</li>
+						<li><a href="#">Nicole</a></li>
+						<li class="Label">S</li>
+						<li><a href="#">Samantha</a></li>
+						<li><a href="#">Scott</a></li>
+					</ul>
+			</li>
+			<li>
+				<span>Family</span>
+				<ul>
+					<li class="Label">A</li>
+					<li><a href="#">Adam</a></li>
+					<li class="Label">B</li>
+					<li><a href="#">Ben</a></li>
+					<li><a href="#">Bruce</a></li>
+					<li class="Label">E</li>
+					<li><a href="#">Eddie</a></li>
+					<li class="Label">J</li>
+					<li><a href="#">Jack</a></li>
+					<li><a href="#">John</a></li>
+					<li class="Label">M</li>
+					<li><a href="#">Martina</a></li>
+					<li><a href="#">Matthew</a></li>
+					<li class="Label">O</li>
+					<li><a href="#">Olivia</a></li>
+					<li><a href="#">Owen</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>Work colleagues</span>
+					<ul>
+						<li class="Label">D</li>
+						<li><a href="#">David</a></li>
+						<li><a href="#">Dennis</a></li>							
+						<li class="Label">E</li>
+						<li><a href="#">Eliza</a></li>							
+						<li class="Label">L</li>
+						<li><a href="#">Larry</a></li>
+						<li><a href="#">Lisa</a></li>							
+						<li class="Label">M</li>
+						<li><a href="#">Michael</a></li>							
+						<li class="Label">R</li>
+						<li><a href="#">Rachelle</a></li>
+						<li><a href="#">Rick</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+			
+<div style='visibility:hidden;height:0px;position:absolute;z-index:9000'>
+	<div id='header9' >Notification</div> 
+    <div id='content9'>
+		<div style='width:300px;clear:both;height:400px;overflow-y: scroll;-webkit-overflow-scrolling: touch;' id='notif1'>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			
+		</div>
     </div>
-  </body>
+</div>
+    <!--[if lt IE 9]>
+     <script src="js/excanvas.min.js" type="text/javascript"></script>
+     <![endif]-->
+    <script type="text/javascript" src="js/jquery.flippy.min.js"></script>
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="js/shBrushXml.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+					
+	 <script>
+		 					
+			$('#fidelite').popover({header: '#header9', content: '#content9', preventTop: true,preventRight: true});
+			
+		
+
+			$(function() {
+					$('nav#menu-left').mmenu({
+					searchfield: true,
+					hardwareAcceleration : true,
+					slideDuration        : 0
+	/*				
+position          : "left",
+   slidingSubmenus   : true,
+   counters          : {
+      add                  : false,
+      count                : true
+   },
+   searchfield       : {
+      add                  : false,
+      search               : true,
+      placeholder          : "Search",
+      noResults            : "No results found.",
+      showLinksOnly        : true
+   },
+   onClick           : {
+      close                : true,
+      delayPageload        : true,
+      blockUI              : false
+   },
+   configuration     : {
+      hardwareAcceleration : true,
+      preventTabbing       : true,
+      selectedClass        : "Selected",
+      pageNodetype         : "div",
+      menuNodetype         : "nav",
+      slideDuration        : 0
+   }*/
+   
+   
+					});
+				});
+
+
+				//	The menu on the right
+				$(function() {
+
+					$('nav#menu-right').mmenu({
+						position: 'right',
+						counters: true,
+						searchfield: true
+					});
+
+					//	Click a menu-item
+					var $confirm = $('#confirmation');
+					$('#menu-right a').not( '.mmenu-subopen' ).not( '.mmenu-subclose' ).bind(
+						'click.example',
+						function( e )
+						{
+							e.preventDefault();
+							$confirm.show().text( 'You clicked "' + $(this).text() + '"' );
+							$('#menu-right').trigger( 'close' );
+						}
+					);
+				});
+				
+				
+				
+				
+				jQuery(document).ready(function() {
+
+				
+
+					jQuery('.horizotal').showbizpro({
+					
+						dragAndScroll:"on",
+                        visibleElementsArray:[1,1,1,4],
+                        entrySizeOffset:0,
+						carousel:"on",
+                        allEntryAtOnce:"on",
+						ytMarkup:"",
+						vimeoMarkup:"",
+					}	);
+					
+					jQuery('.horizotal1').showbizpro({
+					
+						dragAndScroll:"on",
+                        visibleElementsArray:[3,3,2,1],
+                        entrySizeOffset:0,
+						carousel:"on",
+                        allEntryAtOnce:"on",
+						ytMarkup:"",
+						vimeoMarkup:"",
+					} );
+					
+					jQuery('.horizotal2').showbizpro({
+					
+						dragAndScroll:"on",
+                        visibleElementsArray:[3,3,2,1],
+                        entrySizeOffset:0,
+						carousel:"on",
+                        allEntryAtOnce:"on",
+						ytMarkup:"",
+						vimeoMarkup:"",
+					} );
+	
+
+				});
+         
+         
+	jQuery(document).ready(function($) {	
+
+
+
+				
+	  var opts = {
+		controlNavigation:'thumbnails',
+		imageScaleMode: 'fill',
+		arrowsNav: false,
+		arrowsNavHideOnTouch: true,
+		fullscreen: false,
+		loop: false,
+		thumbs: {
+		  firstMargin: false,
+		  paddingBottom: 0
+		},
+		
+		numImagesToPreload: 3,
+		thumbsFirstMargin: false,
+		autoScaleSlider: true, 
+		autoScaleSliderWidth: 990,     
+		autoScaleSliderHeight: 600,
+		keyboardNavEnabled: true,
+		navigateByClick: true,
+		fadeinLoadedSlide: true,
+		imgWidth: 707,
+		imgHeight: 397
+	  };
+	  ///* if(!$.browser.webkit) {
+		opts.imgWidth = 707;
+		opts.imgHeight = 397;
+		keyboardNavEnabled:true;
+	  //} */
+	  var sliderJQ = $('#homeSlider').royalSlider(opts);
+	var taillebis=parseFloat(document.getElementById('homeSlider').style.height.length)-2;	
+
+	var newtaille=parseFloat(document.getElementById('homeSlider').style.height.substr(0,taillebis))-30+300;
+                   
+      document.getElementById('homeSlider').style.height=newtaille+'px';
+/*
+	var taillebiss=parseFloat(document.getElementById('rsImg').style.height.length)-2;	
+	var newtailles=parseFloat((document.getElementById('rsImg').style.height.substr(0,taillebiss))/2);
+	document.getElementById('rsImg').style.height=newtailles+'px';
+	document.getElementById('rsImgs').style.height=newtailles+'px';*/
+	var taillebisss=parseFloat(document.getElementById('rsOverfloweee').style.height.length)-2;
+	var newtaillesss=parseFloat(document.getElementById('rsOverfloweee').style.height.substr(0,taillebisss))+150;
+                           
+                           document.getElementById('rsOverfloweee').style.height=newtaillesss+'px';
+	
+	
+						
+						
+						
+	});
+
+	
+
+				
+				
+				function tato() {
+
+    document.getElementById('ti').value=1;
+     
+	}
+	
+		
+
+	  </script>
+	  <script src="js/jquery.lazyload.js?v=1.8.3" charset="utf-8"></script>
+	  <script type="text/javascript" charset="utf-8">
+		 $(function() {          
+			  $("img").lazyload({
+				  event : "sporty"
+			  });
+		  });
+		  $(window).bind("load", function() { 
+			  var timeout = setTimeout(function() { $("img").trigger("sporty"); }, 5000);
+		  });  
+		$heig=parseFloat($("#fale").height())+150;
+          document.getElementById('ac').style.height=$heig+'px';
+		document.getElementById('ac').style.width=$("#fale").width()+'px';
+		wida=parseFloat($("#fale").width()*0.8);
+		heita=parseFloat($(window).height())-130;
+		document.getElementById('notif1').style.width=wida+'px';
+		document.getElementById('notif1').style.height=heita+'px';
+	  </script>
+	
+	
+			
+	</body>
 </html>
