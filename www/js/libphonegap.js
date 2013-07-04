@@ -274,7 +274,7 @@ function fail(error) {
                         if (mypostrequest.readyState==4){
                             if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
                                 document.getElementById("mapper").innerHTML = mypostrequest.responseText;
-                                document.getElementById("loadi").innerHTML='Donn&eacute;es de g&eacute;olocalisation envoy&eacute;es avec succ&egrave;s';
+                                document.getElementById("loadi").innerHTML= "<img src='icones/loader1.gif' />";
                             }
                             else{
                                 alert("An error has occured making the request");
@@ -291,7 +291,7 @@ function fail(error) {
 					 
                     var parameters = "userdog="+userdog+"&monmaping="+monmaping+"&lieucharriot="+lieucharriot+"&magasindog="+magasindog+"&latitudes="+latitudes+"&longitudes="+longitudess;
                   
-                    document.getElementById("mapper").innerHTML="<img src='pictures/loadinglargeur.gif' style='border:0px;' />";
+                    document.getElementById("loadi").innerHTML="<img src='icones/loader1.gif' style='border:0px;' />";
                     mypostrequest.open("POST", "http://www.linaweb.ma/hotdog/sendmaps.php", true);
                     mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     mypostrequest.send(parameters);

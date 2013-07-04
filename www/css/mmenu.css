@@ -5,9 +5,9 @@ html.mmenu-opened .mmenu-page,
 html.mmenu-opened #mmenu-blocker,
 .mmenu.mmenu-horizontal ul
 {
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.1s;
+	-moz-transition-duration: 0.1s;
+	transition-duration: 0.1s;
 	
 	-webkit-transition-timing-function: ease;
 	-moz-transition-timing-function: ease;

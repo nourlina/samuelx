@@ -23,8 +23,7 @@
     <script src="js/connexion.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/divers.js"></script>    
 	<script src="js/libphonegap.js" charset="utf-8"></script>	
-<!--<link href='css/mobiles.min.css' rel='stylesheet' type='text/css' />-->
-	 <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/docs.css" />
 	<link type="text/css" rel="stylesheet" href="css/mmenu.css" />
 	<link href="css/royalslider.css" rel="stylesheet">
@@ -33,7 +32,6 @@
     <link href="css/reset.css?v=1.0.4" rel="stylesheet">
     <link href="css/rs-default-inverted.css?v=1.0.4" rel="stylesheet">
 	<link href="css/homeslider.css" rel="stylesheet">		
-    <link href="css/classe.css" rel="stylesheet" type="text/css" />	
     <link rel="stylesheet" href="css/shCore.css"/>
     <link rel="stylesheet" href="css/shThemeRDark.css"/>	
 	<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
@@ -52,61 +50,79 @@
         
         
 </head>
-	<body style="height:100%;overflow:hidden;">
+	<body style="height:100%;overflow:hidden;" onload="tr();">
+        
+        
+                
+        
 
 <input type='hidden' value='0' id='fliper'><input type="hidden" value="" id="latitudes"><input type="hidden" value="" id="longitudes"><input type='hidden' value='0' id='ti'>
+
+
     <div id="page" >
 			<div id="header">
 				<a href="#menu-left"></a>
-				<!--<a href="#" class="win right3" >15245</a>-->
-				<a href="#" class="winn right3" ></a>
-				<a href="#" id='fidelite' class="notif right2" ></a>
-				<a href="#" class="coeu right1" ></a>
+				<a href="#" class="logoproveit left01" ></a>
+				<a href="#" class="winn right2" ></a>
+				<a href="#" id='fidelite' class="notif right1" ></a>
 				<a href="#menu-right" class="friends right"></a>
 			</div>
-			<div id="content">
-				
-	
 			
-		<div style='visibility:hidden;height:0px;' id='flipbox1s'></div>   
-				<div id="homeSlider" class="royalSlider rsDefaultInv" style="background-color:none;">
+        <div style='visibility:hidden;height:0px;'>
+            <div id='header9' style='visibility:hidden;height:0px;'>Notification</div>
+            <div id='content9' style='visibility:hidden;height:0px;'>
+<!--<div style='width:300px;clear:both;height:0px;' id='notif1'>
+                    <div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+                        <div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+                        <div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+                    </div>
+                    <div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+                        <div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+                        <div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+                    </div>
+                    <div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+                        <div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+                        <div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+                    </div>
+                    <div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+                        <div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+                        <div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+                    </div>
+                    <div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+                        <div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+                        <div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+                    </div>
+                    <div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+                        <div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+                        <div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+                    </div>
+                    
+                </div>-->            
+            </div>
+        </div>
+        
+        
+	
+	
+	
+			<div id="content" style="height:300px;">
+                
+               
+                
+                
+                
+			
+		<div style='visibility:hidden;height:0px;' id='flipbox1s'></div>
+				<div id="homeSlider" class="royalSlider rsDefaultInv" >
 
-	<div class="rsContent" style='background-color:#fff;overflow-y: scroll;-webkit-overflow-scrolling: touch;'>
+	<div class="rsContent" style='background-color:#fff;height:auto;overflow-y: scroll;-webkit-overflow-scrolling: touch;' id='falee'>
 						<i class="rsTmb" >About me</i>
                         
                                                
 						<div id="flipbox1" class="flipbox">
 							<div style="height:30px;background-color:none;clear:both;" id="mapper">&nbsp;</div>
                            
-                            
-                       
-                            
-                            <div style='width:100%;' class='horizotal1' onclick='taco(3);' ondrop='taco(3);' ondrag='taco(3);' >
-			<div class="showbiz-container fullwidth nopaddings " >
-				<div class="showbiz sb-modern-skin" >
-					<div class="overflowholder" style="position: relative; cursor: -webkit-grab; overflow: hidden; height: 420px;"><div style="position: absolute; opacity: 0; background: none; width: 15.95169px; height: 6px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; margin: -6px 0px 0px; z-index: 999;"><img src='icones/ajax-loader1.gif' style='border:0px;' /></div>
-						<ul style="left: 0px; height: 420px;" >
-							<li class="sb-modern-skin" >
-										<div class="mediaholder">
-											<div class="mediaholder_innerwrap">
-												<img src="pictures/01.jpg"  />
-											</div>
-										</div>
-							</li>
-							<li class="sb-modern-skin" >
-										<div class="mediaholder">
-											<div class="mediaholder_innerwrap">
-												<img src="pictures/01.jpg" />
-											</div>
-										</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>                         
-                            
-                            
+                         
                             
 			
 							<div id='fale' >	
@@ -114,7 +130,7 @@
 										<div class="username">
 											<input type="email" id="login_username" name="login_username" placeholder="Utilisateur" onclick="taco(1)" >
 										</div>
-										<div style='padding-top:0px;'>
+										<div style='padding-top:5px;'>
 										<div class="passes">
 											<input type="password" id="login_passwd" name="login_passwd" placeholder="Mot de passe" onclick="taco(2)">
 										</div></div>									
@@ -122,11 +138,11 @@
 								<div style='width:100%;padding-top:5px;text-align:center;visibility:visible;height:auto' >
 								<table style='width:100%;'>
 									<tr>
+									<td style='width:3%;float:left;'>&nbsp;</td>
+									<td style='width:46%;float:left;'><button class="button1" onclick="sendmap()"><div style='width:100%;'><div style='text-align:left;float:left;width:5%'>&nbsp;</div><div style='text-align:left;float:left;width:85%'>Se connecter</div><div style='text-align:left;float:left;width:10%' id='loadi'></div></div></button></td>
 									<td style='width:4%;float:left;'>&nbsp;</td>
-									<td style='width:40%;float:left;'><button class="button1" onclick="sendmap()">Se connecter</button></td>
-									<td style='width:8%;float:left;'>&nbsp;</td>
 									<td style='width:44%;float:left;padding-top:8px;'><a href='#' class='lien1'>Forgot your password?</a></td>
-									<td style='width:4%;float:left;'>&nbsp;</td>
+									<td style='width:3%;float:left;'>&nbsp;</td>
 									
 									
 									
@@ -136,14 +152,14 @@
 								</div>
 								
 								
-								<div style='clear:both;padding-top:5px;text-align:center;'><img src='pictures/twi.jpg' /></div>
-								<div style='clear:both;padding-top:5px;text-align:center;'><img src='pictures/faceb.jpg' /></div>								
+								<div style='clear:both;padding-top:10px;text-align:center;'><img src='pictures/twi.jpg' /></div>
+								<div style='clear:both;padding-top:10px;text-align:center;'><img src='pictures/faceb.jpg' /></div>								
 								<div style='clear:both;text-align:center'><a class='lien1' href="#" >Not yet a member?</a></div>
 						</div>
 					</div>
 					
 								
-					<div style='clear:both;padding-top:0px;text-align:center;' id="retour1" ><div style='clear:both;height:30px;text-align:center;font-size:10px' id='loadi'>&nbsp;</div>
+					<div style='clear:both;padding-top:0px;text-align:center;' id="retour1" ><div style='clear:both;height:30px;text-align:center;font-size:10px' >&nbsp;</div>
                         <div id='monmaping' style="visibility:hidden;height:0px"></div><div style='padding-top:5px;clear:both;text-align:center;width:100%;' ><a class="button2" id="btn-left" > &nbsp;&nbsp;&nbsp;Sign up&nbsp;&nbsp;&nbsp;</a>
 				</div></div>
 				<div style='height:10px;clear:both;width:100%;'>&nbsp;</div>
@@ -156,9 +172,8 @@
 	
 	
 	<div class="rsContent">
-					<i class="rsTmb" onclick='taco(5);'>Home</i>
+					<i class="rsTmb" onclick='taco(5);' id='hohoh'>Home</i>
 					<div style="height:30px;background-color:none;clear:both;">&nbsp;</div>		   
-					<!--<img class="rsImg" src="pictures/01.jpg" id='rsImg' />-->
 		<div style='width:100%;' class='horizotal2' onclick='taco(3);' ondrop='taco(3);' ondrag='taco(3);' >
 			<div class="showbiz-container fullwidth nopaddings " >
 				<div class="showbiz sb-modern-skin" >
@@ -206,8 +221,7 @@
 				</div>
 	
 	
-	
-	<div class="rsContent">
+		<div class="rsContent">
 					<i  class="rsTmb" onclick='taco(5);'>My page</i>
 					<div style="height:30px;background-color:none;clear:both;">&nbsp;</div>
 						<div style="height:1500px; overflow-y: scroll;-webkit-overflow-scrolling: touch;">
@@ -221,7 +235,6 @@
 					</div>
 				<div id="sidebar"></div>           
           </div>
-	
 	
 	
 	
@@ -450,7 +463,6 @@
 		</div>
 </div>	
 
-
 	
 	</div>
 	          <div class="rsContent">
@@ -482,7 +494,7 @@
 		<ul>
 			<li><a href="test.html">Mon profil</a></li>
 			<li><a href="1.html">Carte de visite</a></li>
-			<li><a href="#" onclick='page(3)';>Podometre</a></li>
+			<li><a href="#" onclick='tr()';>Podometre</a></li>
 			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes photos</span></li>
 			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes vidéos</span></li>
 			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes cadeaux</span></li>
@@ -563,39 +575,8 @@
 			</ul>
 		</nav>
 	</div>
-			
-<div style='visibility:hidden;height:0px;position:absolute;z-index:9000'>
-	<div id='header9' >Notification</div> 
-    <div id='content9'>
-		<div style='width:300px;clear:both;height:400px;overflow-y: scroll;-webkit-overflow-scrolling: touch;' id='notif1'>
-			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
-				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
-				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
-			</div>
-			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
-				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
-				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
-			</div>
-			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
-				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
-				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
-			</div>
-			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
-				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
-				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
-			</div>
-			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
-				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
-				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
-			</div>
-			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
-				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
-				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
-			</div>
-			
-		</div>
-    </div>
-</div>
+		
+
     <!--[if lt IE 9]>
      <script src="js/excanvas.min.js" type="text/javascript"></script>
      <![endif]-->
@@ -610,41 +591,14 @@
 			$('#fidelite').popover({header: '#header9', content: '#content9', preventTop: true,preventRight: true});
 			
 		
+		
 
 			$(function() {
 					$('nav#menu-left').mmenu({
 					searchfield: true,
 					hardwareAcceleration : true,
 					slideDuration        : 0
-	/*				
-position          : "left",
-   slidingSubmenus   : true,
-   counters          : {
-      add                  : false,
-      count                : true
-   },
-   searchfield       : {
-      add                  : false,
-      search               : true,
-      placeholder          : "Search",
-      noResults            : "No results found.",
-      showLinksOnly        : true
-   },
-   onClick           : {
-      close                : true,
-      delayPageload        : true,
-      blockUI              : false
-   },
-   configuration     : {
-      hardwareAcceleration : true,
-      preventTabbing       : true,
-      selectedClass        : "Selected",
-      pageNodetype         : "div",
-      menuNodetype         : "nav",
-      slideDuration        : 0
-   }*/
-   
-   
+
 					});
 				});
 
@@ -689,26 +643,20 @@ position          : "left",
 						vimeoMarkup:"",
 					}	);
 					
-					jQuery('.horizotal1').showbizpro({
-					
-						dragAndScroll:"on",
-                        visibleElementsArray:[3,3,2,1],
-                        entrySizeOffset:0,
-						carousel:"on",
-                        allEntryAtOnce:"on",
-						ytMarkup:"",
-						vimeoMarkup:"",
-					} );
+				
 					
 					jQuery('.horizotal2').showbizpro({
 					
-						dragAndScroll:"on",
+						
+                        dragAndScroll:"off",
                         visibleElementsArray:[3,3,2,1],
                         entrySizeOffset:0,
-						carousel:"on",
-                        allEntryAtOnce:"on",
-						ytMarkup:"",
-						vimeoMarkup:"",
+						carousel:"off",
+                        allEntryAtOnce:0,
+                        speed:500,
+                        autoPlay:"on",
+                        rewindFromEnd:"on",
+                        delay:3000
 					} );
 	
 
@@ -753,12 +701,7 @@ position          : "left",
 
 	var newtaille=parseFloat(document.getElementById('homeSlider').style.height.substr(0,taillebis))-30+300;
                    
-      document.getElementById('homeSlider').style.height=newtaille+'px';
-/*
-	var taillebiss=parseFloat(document.getElementById('rsImg').style.height.length)-2;	
-	var newtailles=parseFloat((document.getElementById('rsImg').style.height.substr(0,taillebiss))/2);
-	document.getElementById('rsImg').style.height=newtailles+'px';
-	document.getElementById('rsImgs').style.height=newtailles+'px';*/
+     document.getElementById('homeSlider').style.height=newtaille+'px';
 	var taillebisss=parseFloat(document.getElementById('rsOverfloweee').style.height.length)-2;
 	var newtaillesss=parseFloat(document.getElementById('rsOverfloweee').style.height.substr(0,taillebisss))+150;
                            
@@ -785,22 +728,29 @@ position          : "left",
 	  </script>
 	  <script src="js/jquery.lazyload.js?v=1.8.3" charset="utf-8"></script>
 	  <script type="text/javascript" charset="utf-8">
-		 $(function() {          
+		/* $(function() {          
 			  $("img").lazyload({
 				  event : "sporty"
 			  });
 		  });
 		  $(window).bind("load", function() { 
 			  var timeout = setTimeout(function() { $("img").trigger("sporty"); }, 5000);
-		  });  
-		$heig=parseFloat($("#fale").height())+150;
+		  }); */ 
+		$heig=parseFloat($("#fale").height())+27;
           document.getElementById('ac').style.height=$heig+'px';
 		document.getElementById('ac').style.width=$("#fale").width()+'px';
 		wida=parseFloat($("#fale").width()*0.8);
 		heita=parseFloat($(window).height())-130;
-		document.getElementById('notif1').style.width=wida+'px';
-		document.getElementById('notif1').style.height=heita+'px';
-	  </script>
+		//document.getElementById('notif1').style.width=wida+'px';
+		//document.getElementById('notif1').style.height=heita+'px';
+        //document.getElementById('notif1').style.height='0px';
+          //document.getElementById('falee').style.height='530px';
+          function tr()
+          {
+              $('#hohoh').click();
+          }
+          
+          </script>
 	
 	
 			

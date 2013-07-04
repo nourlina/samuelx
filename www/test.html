@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if IE Mobile]>
    <html class="ie">
@@ -22,87 +21,290 @@
 	<script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
 	<script src="js/ajax.js" charset="utf-8"></script>
     <script src="js/connexion.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/divers.js"></script>    
 	<script src="js/libphonegap.js" charset="utf-8"></script>	
-<!--<link href='css/mobiles.min.css' rel='stylesheet' type='text/css' />-->
+
 	 <link rel="stylesheet" href="css/style.css">
 	<link type="text/css" rel="stylesheet" href="css/docs.css" />
 	<link type="text/css" rel="stylesheet" href="css/mmenu.css" />
-	<link href="css/royalslider.css" rel="stylesheet">
+	
     <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery.royalslider.min.js?v=9.3.6"></script>
-    <link href="css/reset.css?v=1.0.4" rel="stylesheet">
-    <link href="css/rs-default-inverted.css?v=1.0.4" rel="stylesheet">
-	<link href="css/homeslider.css" rel="stylesheet">		
+  
     <link href="css/classe.css" rel="stylesheet" type="text/css" />	
     <link rel="stylesheet" href="css/shCore.css"/>
-    <link rel="stylesheet" href="css/shThemeRDark.css"/>
-	<script type="text/javascript" src="js/divers.js"></script>
+    <link rel="stylesheet" href="css/shThemeRDark.css"/>	
 	<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sw/styles.css">
+</head>
+	<body style="height:100%;overflow:hidden;">
+
+<input type='hidden' value='0' id='fliper'><input type="hidden" value="" id="latitudes"><input type="hidden" value="" id="longitudes"><input type='hidden' value='0' id='ti'>
+    <div id="page" >
+			<div id="header">
+				<a href="#menu-left"></a>
+				<!--<a href="#" class="win right3" >15245</a>-->
+				<a href="#" class="winn right3" ></a>
+				<a href="#" id='fidelite' class="notif right2" ></a>
+				<a href="#" class="coeu right1" ></a>
+				<a href="#menu-right" class="friends right"></a>
+			</div>
+			<div id="content">
+<!--
+        <div id="pageWrapper">
+            <div id="pageScroller">
+                <div class="page" >
+                    <h1>Page 1</h1>
+                    <hr/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h2>Subtitle</h2>
+                    <hr/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <h2>Subtitle</h2>
+                    <hr/>
+                </div>
+
+                <div class="page" >
+                    <h1>Page 2</h1>
+                    <hr/>
+                    <img src="sw/picture.jpg" width="100%"/>
+                </div>
+                <div class="page" >
+                    <div id="wrapper">
+                        <div class="scroller">
+                            <h1>Page 3</h1>
+                            <hr/>
+                            <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p>
+                            <p>Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                            <p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat...</p>
+                            <br/>
+                            <h2>More Lorem Ipsum</h2>
+                            <hr/>
+                            <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p>
+                            <p>Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                            <p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat...</p>
+                            <br/>
+                            <h2>Even More Lorem Ipsum</h2>
+                            <hr/>
+                            <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.</p>
+                            <p>Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet, consectetur, adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                            <p>Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                            <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page" >
+                    <h1>Page 4</h1>
+                    <hr/>
+                    <div style="width:100%;text-align:center;">
+                        <img src="sw/logo.png" />
+                    </div>
+                </div>
+            </div>
+     
+	 -->
+	 
+	</div>
 	
-	
-	<script type="text/javascript" src="cssjs/jquerys.js"></script>
-	<link rel="stylesheet" type="text/css" href="cssjs/settings.css" media="screen">
-	<script type="text/javascript" src="cssjs/jquery.themepunch.plugins.min.js"></script>
-	<script type="text/javascript" src="cssjs/jquery.themepunch.showbizpro.min.js"></script>
-  
-  <link href="popoverDemo.css" media="screen" rel="stylesheet" type="text/css" /> 
-    <link href="jquery.popover.css" media="screen" rel="stylesheet" type="text/css" /> 
-<script src="jquery.popover.js" type="text/javascript"></script> 
-
-	</head>
-<body style='background-color:#613433;'>
-
-<br /><br /><a class="super fidelite pink" href="#" style='font-size:18px;font-weight:bold;color:#fff;letter-spacing:5px' id='fidelite' >CARTE DE FIDELITE</a>
 
 
 
-<div style='visibility:hidden;'>
-
-
-	
+	<nav id="menu-left">
+		<ul>
+			<li><a href="test.html">Mon profil</a></li>
+			<li><a href="1.html">Carte de visite</a></li>
+			<li><a href="#" onclick='page(3)';>Podometre</a></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes photos</span></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes vidéos</span></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Mes cadeaux</span></li>
+			<li><a href="#">Mes batailles</a></li>
+			<li><em class="mmenu-counter">12</em><a class="mmenu-subopen mmenu-fullsubopen" href="#mmenu-s2-0"></a><span>Amis</span></li>
+			<li><a href="#">Meeting spot</a></li>
+			<li><a href="#">Boutique Objet</a></li>
+			<li><a href="#">Boutique Action</a></li>
+			<li><a href="#">Déconnexion</a></li>
+			
+		</ul>
+	</nav>
+	<nav id="menu-right">
+		<ul>
+			<li>
+				<span>Friends</span>
+					<ul>
+						<li class="Label">A</li>
+						<li><a href="#ALES">Alexa</a></li>
+						<li><a href="#">Alexander</a></li>
+						<li class="Label">F</li>
+						<li><a href="#">Fred</a></li>
+						<li class="Label">J</li>
+						<li><a href="#">James</a></li>
+						<li><a href="#">Jefferson</a></li>
+						<li><a href="#">Jordan</a></li>
+						<li class="Label">K</li>
+						<li><a href="#">Kim</a></li>
+						<li class="Label">M</li>
+						<li><a href="#">Meagan</a></li>
+						<li><a href="#">Melissa</a></li>							
+						<li class="Label">N</li>
+						<li><a href="#">Nicole</a></li>
+						<li class="Label">S</li>
+						<li><a href="#">Samantha</a></li>
+						<li><a href="#">Scott</a></li>
+					</ul>
+			</li>
+			<li>
+				<span>Family</span>
+				<ul>
+					<li class="Label">A</li>
+					<li><a href="#">Adam</a></li>
+					<li class="Label">B</li>
+					<li><a href="#">Ben</a></li>
+					<li><a href="#">Bruce</a></li>
+					<li class="Label">E</li>
+					<li><a href="#">Eddie</a></li>
+					<li class="Label">J</li>
+					<li><a href="#">Jack</a></li>
+					<li><a href="#">John</a></li>
+					<li class="Label">M</li>
+					<li><a href="#">Martina</a></li>
+					<li><a href="#">Matthew</a></li>
+					<li class="Label">O</li>
+					<li><a href="#">Olivia</a></li>
+					<li><a href="#">Owen</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>Work colleagues</span>
+					<ul>
+						<li class="Label">D</li>
+						<li><a href="#">David</a></li>
+						<li><a href="#">Dennis</a></li>							
+						<li class="Label">E</li>
+						<li><a href="#">Eliza</a></li>							
+						<li class="Label">L</li>
+						<li><a href="#">Larry</a></li>
+						<li><a href="#">Lisa</a></li>							
+						<li class="Label">M</li>
+						<li><a href="#">Michael</a></li>							
+						<li class="Label">R</li>
+						<li><a href="#">Rachelle</a></li>
+						<li><a href="#">Rick</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+			
+<div style='visibility:hidden;height:0px;position:absolute;z-index:9000'>
 	<div id='header9' >Notification</div> 
     <div id='content9'>
-		<table  cellspacing='8' border='0' style='width:200px;font-size:16px;'>
-		<tr><td colspan='4'>&nbsp;</td></tr>		
-		<tr>
-			<td align='center' width='45%'><b>N&deg; de la carte</b><br /><input type="number" name="ncartef" id="ncartef" value="1" onfocus="if(this.value=='1') this.value='';" onblur="if(this.value=='') this.value='1';" style='width:250px;text-align:center;font-size:22px;height:40px;' ></td>
-			<td style='width:10%'>&nbsp;</td>
-			<td align='center' width='20%' colspan='2'><a class="super vc pink" href="javascript:verifiercf(0)"  style='color:#fff;font-size:24px;font-weight:bold'>V / A</a></td>			
-			<td align='center' width='25%'><a class="super button17a pink" href="javascript:validercf()"  style='color:#fff;font-size:18px;font-weight:bold;letter-spacing:5'>VALIDER LA CARTE </a></td>
-		</tr>
-		<tr><td colspan='5'>&nbsp;</td></tr>
-		<tr>
-			<td colspan='5' id='clientfidele'>
-				&nbsp;
-			</td>
-		</tr>
-		<tr>
-			<td align='right' colspan='5'><img src='icones/fermer.png' style='width:40px;' onclick='fermerpover("#fidelite");'/></td>
-		</tr>
+		<div style='width:300px;clear:both;height:400px;overflow-y: scroll;-webkit-overflow-scrolling: touch;' id='notif1'>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern1.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
+			<div style='height:50px;width:100%;clear:both;border:1px solid #dbdada'>
+				<div style='width:25%;float:left;'><img src='pict/modern2.jpg' style='width:100%;height:100%;border:0px' /></div>
+				<div style='width:75%;float:left;text-align:left'><div style='padding-left:10px;padding-right:10px;color:black;font-size:12px;font-family:arial;line-height: 12px; '><b>Soufiane BARAKAT</b> vous invite à essayer <b>Vidéo Love</div></div>
+			</div>
 			
-	</table>		
+		</div>
     </div>
-</div><br /><br />
-	
-
-
+</div>
+  
 	
 	
 	
- <script type="text/javascript">
+			
+	</body>
+</html>
 
 
-		$('#fidelite').popover({header: '#header9', content: '#content9', preventTop: true,preventRight: true});
+<script src="sw/jquery-1.7.2.msin.js"></script>
+<script src="sw/iscroll.js"></script>
+<script src="sw/scroll.js"></script>
+
+  <!--[if lt IE 9]>
+     <script src="js/excanvas.min.js" type="text/javascript"></script>
+     <![endif]-->
+    <script type="text/javascript" src="js/jquery.flippy.min.js"></script>
+    <script type="text/javascript" src="js/shCore.js"></script>
+    <script type="text/javascript" src="js/shBrushJScript.js"></script>
+    <script type="text/javascript" src="js/shBrushXml.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+					
+	 <script>
+		 					
+		
+
+			$(function() {
+					$('nav#menu-left').mmenu({
+					searchfield: true,
+					hardwareAcceleration : true,
+					slideDuration        : 0
+
+					});
+				});
+
+
+				//	The menu on the right
+				$(function() {
+
+					$('nav#menu-right').mmenu({
+						position: 'right',
+						counters: true,
+						searchfield: true
+					});
+
+					//	Click a menu-item
+					var $confirm = $('#confirmation');
+					$('#menu-right a').not( '.mmenu-subopen' ).not( '.mmenu-subclose' ).bind(
+						'click.example',
+						function( e )
+						{
+							e.preventDefault();
+							$confirm.show().text( 'You clicked "' + $(this).text() + '"' );
+							$('#menu-right').trigger( 'close' );
+						}
+					);
+				});
+				
+				
+				
+		</script>
 		
 		
-	   /*
-	
-			$('.box').popover({header: '#header5', content: '#content5', id: 'box-popover', 
-					live: true, openEvent: function() {
-						$("<div class='test-but box' id='box2'>Live button - Click me</div>").appendTo('body');
-					}
-			});	*/
-    </script> 
-	
+</body>
 
-</body></html>
+</html>

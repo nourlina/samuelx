@@ -15,13 +15,13 @@
 }
 .rsDefaultInv .rsThumb.rsNavSelected {
   background-image:url(../pictures/petro.jpg);background-repeat:repeat-x;background-position:bottom center;
-  color:#001d3d;
-  /*border-bottom:2px solid #001d3d;*/
+  color:#4d8e9c;
+  /*border-bottom:2px solid #4d8e9c;*/
 }
 
 .rsDefaultInv .rsThumb.rsNavSelected i{
  /* background-image:url(../pictures/petro.jpg);background-repeat:repeat-x;background-position:bottom center;*/
-  color:#001d3d;
+  color:#4d8e9c;
 }
 
 #homeSlider .example-link {
